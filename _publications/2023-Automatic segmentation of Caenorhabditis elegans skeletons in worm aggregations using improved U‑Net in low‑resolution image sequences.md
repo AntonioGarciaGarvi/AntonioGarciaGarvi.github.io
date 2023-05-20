@@ -1,9 +1,9 @@
 ---
 title: "Automatic segmentation of Caenorhabditis elegans skeletons in worm aggregations using improved U‑Net in low‑resolution image sequences."
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
+permalink: /publication/2023-Automatic segmentation of Caenorhabditis elegans skeletons in worm aggregations using improved U‑Net in low‑resolution image sequences
 excerpt: "<img src='/images/ga1.jpg' alt=''>"
-date: 2009-10-01
+date: 2023
 venue: 'Heliyon'
 paperurl: 'https://doi.org/10.1016/j.heliyon.2023.e14715'
 link: 'https://doi.org/10.1016/j.heliyon.2023.e14715'
