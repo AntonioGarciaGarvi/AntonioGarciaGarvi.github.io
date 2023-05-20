@@ -2,7 +2,7 @@
 title: "A new training strategy for spatial transform networks (STN’s)."
 collection: publications
 permalink: /publication/2022-A new training strategy for spatial transform networks
-excerpt: "<img src='images/papers/stn.jpg' alt=''>"
+excerpt: "<img src='/images/ga1.jpg' alt=''>"
 date: 2023-03-22
 venue: 'Neural Computing and Applications'
 paperurl: 'https://doi.org/10.1016/j.heliyon.2023.e14715'
