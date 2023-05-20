@@ -85,7 +85,7 @@ author:
   bio              : "PhD Candidate"
   location         : "Valencia, Spain"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.es/citations?user=koL-0L8AAAAJ&hl=es&oi=ao"
   email            :
   researchgate     :  https://www.researchgate.net/profile/Antonio-Garcia-Garvi
