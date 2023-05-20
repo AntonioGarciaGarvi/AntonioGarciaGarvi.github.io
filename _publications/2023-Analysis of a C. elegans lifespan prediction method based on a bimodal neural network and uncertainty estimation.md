@@ -1,7 +1,7 @@
 ---
 title: "Analysis of a C. elegans lifespan prediction method based on a bimodal neural network and uncertainty estimation."
 collection: publications
-permalink: /publication/2023-Analysis of a C. elegans lifespan prediction method based on a bimodal neural network and uncertainty estimation.
+permalink: /publication/2023-Analysis of a C. elegans lifespan prediction method based on a bimodal neural network and uncertainty estimation
 excerpt: "<img src='images/pipeline.jpg' alt=''>"
 date: 2023-03-22
 venue: 'Computational and Structural Biotechnology Journal.'
