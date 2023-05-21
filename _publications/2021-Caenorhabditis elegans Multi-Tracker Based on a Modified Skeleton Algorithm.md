@@ -2,7 +2,7 @@
 title: "Caenorhabditis elegans Multi-Tracker Based on a Modified Skeleton Algorithm."
 collection: publications
 permalink: /publication/2021-Caenorhabditis elegans Multi-Tracker Based on a Modified Skeleton Algorithm
-excerpt: "<img src='/images/papers/sktrack.jpg' alt='' width='160' height='80'>"
+excerpt: "<img src='/images/papers/sktrack.jpg' alt='' width='300' height='150'>"
 date: 2021-08-20
 venue: 'Sensors.'
 paperurl: 'https://doi.org/10.3390/s21165622'
