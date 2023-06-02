@@ -7,8 +7,7 @@ date: 2022-10-21
 venue: 'VIII Spanish Worm Meeting.'
 paperurl: 'http://swm2021.cibir.es/'
 link: 'http://swm2021.cibir.es/'
-citation: 'Puchalt, J.C., García‑Garví, A., Layana‑Castro, P.E., Sánchez‑Salmerón, A.J., (2022). &quot; Towards a fully automated device based on deep learning for Caenorhabditis elegans lifespan&quot; <i>2nd International Conference on Optimization, Learning Algorithms and Applications (OL2A
-2022).VIII Spanish Worm Meeting. Logroño, Spain.</i>.'
+citation: 'Puchalt, J.C., García‑Garví, A., Layana‑Castro, P.E., Sánchez‑Salmerón, A.J., (2022). &quot; Towards a fully automated device based on deep learning for Caenorhabditis elegans lifespan&quot; <i>VIII Spanish Worm Meeting. Logroño, Spain.</i>.'
 ---
 [Download paper here](http://swm2021.cibir.es/)
 
