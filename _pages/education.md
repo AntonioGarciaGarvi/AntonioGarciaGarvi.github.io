@@ -9,6 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-* B.S. in INDUSTRIAL ELECTRONICS AND AUTOMATION ENGINEERING, Universidad Politécnica de Valencia, 2015-2019
-* M.S. in AUTOMATION AND INDUSTRIAL COMPUTING, Universidad Politécnica de Valencia, 2019-2020
-* Ph.D in PHD iN AUTOMATION, ROBOTICS AND INDUSTRIAL COMPUTER SCIENCE, Universidad Politécnica de Valencia, 2021-Now 
+* B.S. in [Industrial Electronics and Automation Engineering](http://www.upv.es/titulaciones/GIEIA/index-en.html), Universidad Politécnica de Valencia, 2015-2019
+* M.S. in [Automation and Industrial Computing](http://www.upv.es/titulaciones/MUAII/), Universidad Politécnica de Valencia, 2019-2020
+* Ph.D in [Automation, Robotics and Industrial Computer Science](http://www.upv.es/entidades/EDOCTORADO/info/1004365normali.html), Universidad Politécnica de Valencia, 2021-Now 
