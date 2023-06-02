@@ -14,3 +14,8 @@ Journal Publications
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
 {% endfor %}
+
+Conferences
+{% for post in site.conferences reversed %}
+  {% include archive-single.html %}
+{% endfor %}
