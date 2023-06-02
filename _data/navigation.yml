@@ -3,14 +3,14 @@ main:
   - title: "Home"
     url: /about/
     
-  - title: "Education"
-    url: /education/
-    
   - title: "Publications"
     url: /publications/
     
   - title: "Teaching"
-    url: /teaching/    
+    url: /teaching/   
+    
+  - title: "Education"
+    url: /education/
     
   - title: "CV"
     url: /cv/
