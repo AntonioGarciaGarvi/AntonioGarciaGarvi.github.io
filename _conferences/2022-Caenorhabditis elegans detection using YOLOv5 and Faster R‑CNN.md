@@ -2,7 +2,7 @@
 title: "Caenorhabditis elegans detection using YOLOv5 and Faster R‑CNN networks."
 collection: conferences
 permalink: /conferences/2022-Caenorhabditis elegans detection using YOLOv5 and Faster R‑CNN
-excerpt: "<img src='/images/papers/sktrack.jpg' alt='' width='300' height='150'>"
+excerpt: "<img src='/images/papers/detection.png' alt='' width='300' height='150'>"
 date: 2022-10-25
 venue: 'OL2A 2022.'
 paperurl: 'https://doi.org/10.3390/s21165622'
