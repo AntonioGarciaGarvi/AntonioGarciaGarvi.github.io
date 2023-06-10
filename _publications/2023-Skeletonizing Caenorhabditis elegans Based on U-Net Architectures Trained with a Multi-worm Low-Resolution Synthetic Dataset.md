@@ -2,7 +2,7 @@
 title: "Skeletonizing Caenorhabditis elegans Based on U-Net Architectures Trained with a Multi-worm Low-Resolution Synthetic Dataset."
 collection: publications
 permalink: /publication/2023-Skeletonizing Caenorhabditis elegans Based on U-Net Architectures Trained with a Multi-worm Low-Resolution Synthetic Dataset
-excerpt: "<img src='/images/papers/sklIJCV.png' alt='' width='600' height='100'>"
+excerpt: "<img src='/images/papers/sklIJCV.png' alt='' width='500' height='100'>"
 date: 2023-06-08
 venue: 'International Journal of Computer Vision'
 paperurl: 'https://doi.org/10.1007/s11263-023-01818-6'
