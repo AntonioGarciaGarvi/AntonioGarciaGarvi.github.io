@@ -3,6 +3,9 @@ main:
   - title: "Home"
     url: /about/
     
+  - title: "Portfolio"  
+    url: /portfolio/
+    
   - title: "Research"
     url: /research/
     
