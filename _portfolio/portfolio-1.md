@@ -1,6 +1,6 @@
 ---
 title: "Taxi Demand Predictor"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/portfolio/taxi_demand_prediction/end2endsystem.png'>"
+excerpt: "Batch-scoring ML that predicts taxi rides in NYC 🚕<br/><img src='/images/portfolio/taxi_demand_prediction/end2endsystem.png'>"
 collection: portfolio
 ---
 
