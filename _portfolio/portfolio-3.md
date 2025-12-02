@@ -1,6 +1,6 @@
 ---
 title: "Push Notification Optimization: ML for e-commerce"
-excerpt: "Push Notification Optimization: ML for e-commerce <br/><img src='/images/portfolio/smart_push_notification/ml_for_e_commerce.png'>"
+excerpt: "Push Notification Optimization: ML for e-commerce <br/><img src='/images/portfolio/smart_push_notification/ml_for_e_commerce.png'style='transform: scale(0.5); transform-origin: top left;'>"
 collection: portfolio
 ---
 In e-commerce, there is a fine line between being "helpful" and being "annoying." Push notifications are a powerful tool to drive sales, but their indiscriminate use often leads to high uninstall rates (churn).
