@@ -1,9 +1,77 @@
 ---
 title: "Bull Market Prediction"
-excerpt: "Bull Market Prediction <br/><img src='/images/portfolio/bull_market_prediction/bull_market_prediction.jpg'>"
+excerpt: "Bull Market Prediction <br/><img src='/images/portfolio/bull_market_prediction/bull_market_prediction.png'>"
 collection: portfolio
 ---
 
-# Proyecto de Data Science: Predicción y Anticipación de Grandes Subidas del Mercado Bursátil (S&P 500)
 
-## 1. Contexto y Motivación Empresarial
+-----
+
+# Predicting Major Market Rallies for Asymmetric Risk Management
+
+**Project Type:** Financial Time Series Forecasting / Binary Classification
+**Role:** Data Scientist
+**Tools:** Python, Scikit-Learn, LightGBM, Pandas, Financial Data APIs
+
+-----
+
+## 1\. Executive Summary
+
+This project was developed in response to a challenge by **ETS Asset Management Factory** during the **Zrive Applied Data Science** program. The objective was to build a machine learning model capable of anticipating sudden, high-magnitude market rallies (specifically, the S\&P 500 rising \>6% within 20 sessions).
+
+The ultimate goal was to generate a predictive signal that allows conservative investment portfolios to capture "upside" potential during market rebounds without compromising their low-risk profile. The proposed implementation involves using these signals to trigger the purchase of Call options, creating an asymmetric risk profile (capped loss, uncapped gain).
+
+## 2\. The Business Problem
+
+Conservative investment portfolios often use hedging strategies to limit **drawdowns** (losses) during market crashes. However, a major pain point arises during the recovery phase:
+
+  * **The Problem:** Protective strategies often dampen returns during rapid "V-shaped" recoveries. Clients are satisfied with protection during the crash but become dissatisfied when their portfolio lags behind the market during the subsequent high-visibility rally.
+  * **The Goal:** Improve the **Upside Capture Ratio** while maintaining a low Downside Capture Ratio.
+  * **The Solution:** Identify specific time windows where the market is statistically likely to surge, allowing the fund to layer on aggressive, limited-risk exposure (Call Options) only when the probability of a rally is high.
+
+*Figure 1: Historical analysis of S\&P 500 "Runups" showing that major rallies often immediately follow deep drawdowns.*
+
+## 3\. Methodology
+
+### Data & Feature Engineering
+
+The model utilized daily financial data, including S\&P 500 Total Return prices, the VIX volatility index, and sector-specific data.
+
+  * **Target Definition:** A binary classification target defined as a market rise of $\ge 6\%$ within a forward-looking 20-session window.
+  * **Feature Construction:**
+      * **Lagged Returns:** Rolling means and standard deviations (volatility) over 20, 60, and 480 days to capture short and long-term trends.
+      * **Drawdown Metrics:** Distance from all-time highs and max drawdowns over varying windows (5d, 15d, etc.).
+      * **Technical Indicators:** RSI (Relative Strength Index) and VIX rate of change.
+  * **Validation Strategy:** To prevent look-ahead bias—a common pitfall in financial ML—I utilized a **Walk-Forward Validation (Rolling Window)** approach, strictly separating training and validation sets chronologically.
+
+*Figure 2: Time series backtesting strategy using refitting and fixed training sizes to simulate real-world production forecasting.*
+
+### Modeling Strategy
+
+The problem is characterized by high noise and a significant class imbalance (only \~7.4% of days preceded a major rally).
+
+1.  **Baselines:** Benchmarked against Random Walks (Monte Carlo simulations), Geometric Brownian Motion (GBM), and standard technical strategies (EMA Crossover + RSI).
+2.  **Model Selection:** Compared Linear Models (Logistic Regression with Ridge/Lasso regularization) against Non-Linear Models (LightGBM).
+3.  **Optimization Metric:** Prioritized **Precision-Recall AUC (PR-AUC)**. In this context, Precision is vital (False Positives cost money in option premiums) and Recall is necessary to ensure we don't miss the rare profitable opportunities.
+
+## 4\. Key Results & Insights
+
+Contrary to the initial hypothesis that complex non-linear models would capture intricate market patterns, **regularized linear models outperformed gradient boosting methods**.
+
+  * **Best Model:** Logistic Regression (L2 penalty, C=0.0001).
+  * **Performance:** Achieved a **PR-AUC of 0.361**, significantly outperforming the GBM baseline (0.073) and the LightGBM model (0.290).
+  * **Simulated Trading Metrics:** With a decision threshold set to 0.5:
+      * **Precision:** \~31% (Roughly 1 in 3 signals resulted in a major rally).
+      * **Recall:** \~35% (The model captured over one-third of all major market moves).
+      * **False Alarm Rate:** \~5.1%.
+
+*Figure 3: Precision-Recall curves demonstrating the Linear Model (Blue) outperforming LightGBM (Orange) and the random baseline.*
+
+## 5\. Conclusion
+
+This project highlighted that predicting large market jumps is a low signal-to-noise ratio problem. The key takeaway was that in highly noisy financial environments, **simpler models with strong regularization often generalize better** than complex architectures, which are prone to overfitting.
+
+The final model provided a statistically significant edge over random chance. By coupling this prediction with an options strategy, the signals are precise enough to justify the cost of premiums, offering a viable method to solve the business problem of lagging performance during market recoveries.
+
+## 6. Credits & Team
+This project was a collaborative effort developed by **Antonio García Garví**, **Pedro Tejero**, and **Hugo Nieto**, under the technical mentorship of **Guillermo Barquero**.
