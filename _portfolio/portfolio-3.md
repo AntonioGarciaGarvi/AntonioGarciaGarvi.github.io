@@ -5,7 +5,7 @@ collection: portfolio
 ---
 In e-commerce, there is a fine line between being "helpful" and being "annoying." Push notifications are a powerful tool to drive sales, but their indiscriminate use often leads to high uninstall rates (churn).
 
-In this project, I developed an **end-to-end purchase prediction system** for a Grocery e-commerce platform. The goal was to shift from mass marketing campaigns to a **precision targeting strategy**, sending notifications only to users with a high probability of converting into profitable orders.
+In this project, developed during the **Zrive Applied Data Science** program, I developed an **end-to-end purchase prediction system** for a Grocery e-commerce platform. The goal was to shift from mass marketing campaigns to a **precision targeting strategy**, sending notifications only to users with a high probability of converting into profitable orders.
 
 ## 1. The Business Challenge: Profitability vs. Intrusiveness
 
@@ -20,9 +20,16 @@ One of the most critical steps in Data Science is translating abstract business 
 
 To bridge the gap between the sales team's requirements and the code, I formulated the specific Machine Learning task as follows:
 
-**Goal**: Develop a Machine Learning model that, given a user and a product, predicts if the user would purchase it if they were buying with us at that point in time.
+> **Goal:** Develop a Machine Learning model that, given a **user** and a **product**, predicts if the user would purchase it if they were buying with us at that point in time.
 
 This translation turns the business challenge into a Binary Classification problem. By predicting this specific probability, we can score every user against the target products and only act when that probability exceeds our risk threshold.
+
+### Evaluation Metrics: Visualizing the Tradeoff
+Because there is a clear tradeoff between the volume of notifications sent (potential sales) and the "annoyance factor" (churn risk), simple accuracy is not enough. We need to visualize the balance between True Positives (successful sales) and False Positives (annoyed users).
+
+To navigate this, I focused on two key curves:
+* **ROC Curve:** To evaluate the model's general ability to distinguish between buyers and non-buyers.
+* **Precision-Recall (PR) Curve:** Given the class imbalance, this was critical. It helps us understand exactly how much precision we lose as we try to capture more buyers (Recall).
 
 ## 3. EDA
 
@@ -37,7 +44,7 @@ I worked with a real transactional dataset including order history, inventory, a
 I adopted an iterative approach, starting with simple solutions to establish a baseline and increasing complexity only when justified by metrics.
 
 ### Phase 1: Linear Models
-First, I established a baseline using global product popularity. Then, I trained **Logistic Regression** models with L1 (Lasso) and L2 (Ridge) regularization.
+First, I established a non-ML baseline using **global product popularity**. Then, I trained **Logistic Regression** models with L1 (Lasso) and L2 (Ridge) regularization.
 * **Result:** Linear models clearly outperformed the non-ML baseline, proving that past user behavior (e.g., ordered before) was predictive.
 * **Feature Selection:** I utilized Lasso to identify the most heavily weighted variables and discard noise, effectively reducing the dimensionality of the problem.
 
@@ -49,8 +56,10 @@ Given that buying behavior is complex, I experimented with **Random Forest** and
 ## 5. From Model to Business Decision: Calibration
 
 A classification model returns a "score," but the business needs a **real probability** to make decisions.
+GBT model had an acceptable calibration although it could be improved while LR was poorly calibrated.
+To address this, I applied **Isotonic Regression** to the final models. This aligned the predicted probabilities with the actual purchase frequencies.
 
-I observed that the Logistic Regression model was poorly calibrated. To address this, I applied **Isotonic Regression** to the final GBT model. This aligned the predicted probabilities with the actual purchase frequencies.
+![Alt text description](images/portfolio/smart_push_notification/calibration.png)
 
 ### The Decision Rule
 Based on the fact that the current notification open rate is **5%**, I set the decision threshold at **0.05**.
