@@ -53,6 +53,8 @@ Given that buying behavior is complex, I experimented with **Random Forest** and
 * **Random Forest:** While powerful, it struggled to generalize effectively due to sampling issues inherent in such imbalanced classes.
 * **Gradient Boosting (GBT):** This was the winning model. By tuning hyperparameters (learning rate 0.05, depth 3), it achieved the best balance between the ROC and Precision-Recall (PR-AUC) curves, outperforming both Logistic Regression and Random Forest on the validation set.
 
+![Alt text description](/images/portfolio/smart_push_notification/model_performance_comparison.png)
+
 ## 5. From Model to Business Decision: Calibration
 
 A classification model returns a "score," but the business needs a **real probability** to make decisions.
@@ -65,6 +67,7 @@ To address this, I applied **Isotonic Regression** to the final models. This ali
 Based on the fact that the current notification open rate is **5%**, I set the decision threshold at **0.05**.
 * If the calibrated probability is > 5%, we send the notification.
 * This ensures that every notification sent has a higher theoretical probability of success than the current random approach ("beating the prevalence").
+![Alt text description](/images/portfolio/smart_push_notification/final_performance.png)
 
 ## 6. Conclusion & Impact
 
