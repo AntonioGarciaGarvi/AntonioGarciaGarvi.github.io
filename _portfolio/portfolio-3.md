@@ -15,7 +15,16 @@ The sales team needed a tool to promote specific items (e.g., clearing out disco
 * **Profitability Margins:** The system must not incentivize purchases of single items due to shipping costs. The model focuses exclusively on predicting purchases that are part of a basket of **at least 5 items**.
 * **KPIs:** The target impact was to increase monthly sales by 2% and achieve a 25% boost on the selected items.
 
-## 2. Data Strategy & EDA
+## 2. Bussiness Translation
+One of the most critical steps in Data Science is translating abstract business goals into a concrete mathematical problem. We cannot simply tell an algorithm to "increase sales without being annoying."
+
+To bridge the gap between the sales team's requirements and the code, I formulated the specific Machine Learning task as follows:
+
+**Goal**: Develop a Machine Learning model that, given a user and a product, predicts if the user would purchase it if they were buying with us at that point in time.
+
+This translation turns the business challenge into a Binary Classification problem. By predicting this specific probability, we can score every user against the target products and only act when that probability exceeds our risk threshold.
+
+## 3. EDA
 
 I worked with a real transactional dataset including order history, inventory, and user behavior.
 
@@ -23,13 +32,13 @@ I worked with a real transactional dataset including order history, inventory, a
 1.  **Extreme Imbalance:** The positive class (user buys the target product) represented only **1.4%** of the data. This ruled out "Accuracy" as a valid metric.
 2.  **Leakage Prevention:** To simulate a real production environment, I avoided random splitting. I implemented a **Time-Aware Split**, dividing Train, Validation, and Test sets by strict time windows (e.g., training on Oct-Jan, validating on Feb) to ensure the model could not "see the future."
 
-## 3. Modeling: From Baseline to Gradient Boosting
+## 4. Modeling: From Baseline to Gradient Boosting
 
 I adopted an iterative approach, starting with simple solutions to establish a baseline and increasing complexity only when justified by metrics.
 
-### Phase 1: Linear Models (MVP)
+### Phase 1: Linear Models
 First, I established a baseline using global product popularity. Then, I trained **Logistic Regression** models with L1 (Lasso) and L2 (Ridge) regularization.
-* **Result:** Linear models clearly outperformed the non-ML baseline, proving that past user behavior (e.g., `ordered_before`) was predictive.
+* **Result:** Linear models clearly outperformed the non-ML baseline, proving that past user behavior (e.g., ordered before) was predictive.
 * **Feature Selection:** I utilized Lasso to identify the most heavily weighted variables and discard noise, effectively reducing the dimensionality of the problem.
 
 ### Phase 2: Non-Linear Models
@@ -37,7 +46,7 @@ Given that buying behavior is complex, I experimented with **Random Forest** and
 * **Random Forest:** While powerful, it struggled to generalize effectively due to sampling issues inherent in such imbalanced classes.
 * **Gradient Boosting (GBT):** This was the winning model. By tuning hyperparameters (learning rate 0.05, depth 3), it achieved the best balance between the ROC and Precision-Recall (PR-AUC) curves, outperforming both Logistic Regression and Random Forest on the validation set.
 
-## 4. From Model to Business Decision: Calibration
+## 5. From Model to Business Decision: Calibration
 
 A classification model returns a "score," but the business needs a **real probability** to make decisions.
 
@@ -48,7 +57,7 @@ Based on the fact that the current notification open rate is **5%**, I set the d
 * If the calibrated probability is > 5%, we send the notification.
 * This ensures that every notification sent has a higher theoretical probability of success than the current random approach ("beating the prevalence").
 
-## 5. Conclusion & Impact
+## 6. Conclusion & Impact
 
 This project demonstrates how to transform a broad business need ("sell more without bothering users") into a robust technical solution.
 
