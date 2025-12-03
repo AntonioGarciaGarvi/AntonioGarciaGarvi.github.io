@@ -59,7 +59,7 @@ A classification model returns a "score," but the business needs a **real probab
 GBT model had an acceptable calibration although it could be improved while LR was poorly calibrated.
 To address this, I applied **Isotonic Regression** to the final models. This aligned the predicted probabilities with the actual purchase frequencies.
 
-![Alt text description](images/portfolio/smart_push_notification/calibration.png)
+![Alt text description](/images/portfolio/smart_push_notification/calibration.png)
 
 ### The Decision Rule
 Based on the fact that the current notification open rate is **5%**, I set the decision threshold at **0.05**.
