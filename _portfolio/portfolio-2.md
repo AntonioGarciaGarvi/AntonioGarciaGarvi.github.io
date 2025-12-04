@@ -3,15 +3,6 @@ title: "Major Market Rallies Prediction"
 excerpt: "Predicting Major Market Rallies for Asymmetric Risk Management <br/><img src='/images/portfolio/market_rallies_prediction/market_rallies_prediction.png' style='transform: scale(0.5); transform-origin: top left;'>"
 collection: portfolio
 ---
------
- 
-
-**Project Type:** Financial Time Series Forecasting / Binary Classification
-**Role:** Data Scientist
-**Tools:** Python, Scikit-Learn, LightGBM, Pandas, Financial Data APIs
-
------
-
 ## 1\. Executive Summary
 
 This project was developed in response to a challenge by **ETS Asset Management Factory** during the **Zrive Applied Data Science** program. The objective was to build a machine learning model capable of anticipating sudden, high-magnitude market rallies (specifically, the S\&P 500 rising \>6% within 20 sessions).
