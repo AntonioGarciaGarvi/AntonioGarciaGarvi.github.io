@@ -1,13 +1,12 @@
 ---
-title: "Bull Market Prediction"
-excerpt: "Bull Market Prediction <br/><img src='/images/portfolio/bull_market_prediction/bull_market_prediction.png'>"
+title: "Major Market Rallies Prediction"
+excerpt: "Predicting Major Market Rallies for Asymmetric Risk Management <br/><img src='/images/portfolio/market_rallies_prediction/market_rallies_prediction.png'>"
 collection: portfolio
 ---
 
 
 -----
-
-# Predicting Major Market Rallies for Asymmetric Risk Management
+ 
 
 **Project Type:** Financial Time Series Forecasting / Binary Classification
 **Role:** Data Scientist
