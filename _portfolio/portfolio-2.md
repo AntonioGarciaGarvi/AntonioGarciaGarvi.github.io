@@ -1,6 +1,6 @@
 ---
 title: "Major Market Rallies Prediction"
-excerpt: "Predicting Major Market Rallies for Asymmetric Risk Management <br/><img src='/images/portfolio/market_rallies_prediction/market_rallies_prediction.png' style='width: 500px; height: 300px; object-fit: cover; border-radius: 8px; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);'>"
+excerpt: "Predicting Major Market Rallies for Asymmetric Risk Management <br/><img src='/images/portfolio/market_rallies_prediction/market_rallies_prediction.png' style='transform: scale(0.5); transform-origin: top left;'>"
 collection: portfolio
 ---
 
