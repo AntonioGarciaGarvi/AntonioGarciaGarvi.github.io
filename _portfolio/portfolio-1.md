@@ -1,6 +1,6 @@
 ---
 title: "Taxi Demand Predictor"
-excerpt: "End to end ML Pipeline for Taxi demand prediction in NYC 🚕<br/><img src='/images/portfolio/taxi_demand_prediction/end2endTaxiDemandPred.png'>"
+excerpt: "End to end ML Pipeline for Taxi demand prediction in NYC 🚕<br/><img src='/images/portfolio/taxi_demand_prediction/end2endTaxiDemandPred.png' style='width: 50%; height: auto;'>"
 collection: portfolio
 ---
 
