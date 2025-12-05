@@ -1,6 +1,6 @@
 ---
 title: "Taxi Demand Predictor"
-excerpt: "Batch-scoring ML that predicts taxi rides in NYC 🚕<br/><img src='/images/portfolio/taxi_demand_prediction/end2endsystem.png'>"
+excerpt: "End to end ML Pipeline for Taxi demand prediction in NYC 🚕<br/><img src='/images/portfolio/taxi_demand_prediction/end2endTaxiDemandPred.png'>"
 collection: portfolio
 ---
 
