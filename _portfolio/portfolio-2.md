@@ -17,7 +17,12 @@ Conservative investment portfolios often use hedging strategies to limit **drawd
   * **The Goal:** Improve the **Upside Capture Ratio** while maintaining a low Downside Capture Ratio.
   * **The Solution:** Identify specific time windows where the market is statistically likely to surge, allowing the fund to layer on aggressive, limited-risk exposure (Call Options) only when the probability of a rally is high.
 
-*Figure 1: Historical analysis of S\&P 500 "Runups" showing that major rallies often immediately follow deep drawdowns.*
+<p align="center">
+  <img src="/images/portfolio/market_rallies_prediction/runupdrawdown.png" width="70%">
+</p>
+
+<p align="center"><em>Figure 1: Historical analysis of S&P 500 "Runups"…</em></p>
+
 
 ## 3\. Methodology
 
