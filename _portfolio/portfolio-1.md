@@ -5,7 +5,11 @@ collection: portfolio
 ---
 
 ## Project Overview
-[![GitHub](/images/github-mark-white.png) **GitHub Repository**](https://github.com/your/repo)
+<a href="https://github.com/your/repo">
+  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="28" />
+  GitHub Repository
+</a>
+
 
 This project involves building a complete Machine Learning service to solve a real-world prediction problem for a ride-sharing company. Unlike standard academic projects that stop at model training, this project focuses on building a complete ML service that is operationally viable.
 
