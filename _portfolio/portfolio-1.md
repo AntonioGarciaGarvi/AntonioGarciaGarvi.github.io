@@ -15,6 +15,7 @@ Ride-sharing companies (like Uber) need to maximize revenue by ensuring their fl
 * **Operational Impact:** By accurately predicting demand, the operations team can incentivize drivers (e.g., via slight price increases or bonuses) to move to high-demand areas, balancing supply and demand.
 
 ## System Architecture (MLOps)
+![ML Pipeline Overview](/images/portfolio/taxi_demand_prediction/MLsystem.png)
 The project is architected as a modular MLOps system rather than a monolithic script. It utilizes a **Feature Store** to decouple feature engineering from model training and inference.
 
 The system consists of three distinct pipelines:
