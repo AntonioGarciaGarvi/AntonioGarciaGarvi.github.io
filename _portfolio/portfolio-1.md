@@ -58,8 +58,8 @@ The project includes a comprehensive monitoring layer to ensure the model remain
 
 ## Tech Stack
 * **Language:** Python
-* **ML Libraries:** Scikit-learn, LightGBM, Optuna
-* **MLOps Tools:** Hopsworks (Feature Store), GitHub Actions
-* **Visualization:** Streamlit
+* **ML Libraries:** Scikit-learn, Pandas, Numpy, LightGBM, Optuna
+* **MLOps Tools:** Hopsworks (Feature Store), Comet (Model registry), GitHub Actions
+* **Visualization:** Streamlit, Plotly
 * **Dependency Management:** Poetry
  
