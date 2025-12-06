@@ -37,7 +37,11 @@ The model utilized daily financial data, including S\&P 500 Total Return prices,
       * **Technical Indicators:** RSI (Relative Strength Index) and VIX rate of change.
   * **Validation Strategy:** To prevent look-ahead bias—a common pitfall in financial ML—I utilized a **Walk-Forward Validation (Rolling Window)** approach, strictly separating training and validation sets chronologically.
 
-*Figure 2: Time series backtesting strategy using refitting and fixed training sizes to simulate real-world production forecasting.*
+<p align="center">
+  <img src="/images/portfolio/market_rallies_prediction/sliding_window_split.png" width="70%">
+</p>
+
+<p align="center"><em>Figure 2: Time series backtesting strategy using refitting and fixed training sizes to simulate real-world production forecasting.</em></p>
 
 ### Modeling Strategy
 
@@ -58,7 +62,11 @@ Contrary to the initial hypothesis that complex non-linear models would capture 
       * **Recall:** \~35% (The model captured over one-third of all major market moves).
       * **False Alarm Rate:** \~5.1%.
 
-*Figure 3: Precision-Recall curves demonstrating the Linear Model (Blue) outperforming LightGBM (Orange) and the random baseline.*
+<p align="center">
+  <img src="/images/portfolio/market_rallies_prediction/PRCurve.png" width="70%">
+</p>
+
+<p align="center"><em>Figure 3: Precision-Recall curves demonstrating the Linear Model (Blue) outperforming LightGBM (Orange) and the drawdown baseline (Red).</em></p>
 
 ## 5\. Conclusion
 
