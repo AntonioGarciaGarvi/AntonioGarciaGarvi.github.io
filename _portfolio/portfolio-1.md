@@ -62,4 +62,7 @@ The project includes a comprehensive monitoring layer to ensure the model remain
 * **MLOps Tools:** Hopsworks (Feature Store), Comet (Model registry), GitHub Actions
 * **Visualization:** Streamlit, Plotly
 * **Dependency Management:** Poetry
- 
+
+## Credits & Context
+This project was created as part of the **Real-World ML** course by **Pau Labarta Bajo**.
+
