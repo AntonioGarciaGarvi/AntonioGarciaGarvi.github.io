@@ -5,7 +5,7 @@ collection: portfolio
 ---
 ## 1\. Executive Summary
 
-This project was developed in response to a challenge by **ETS Asset Management Factory** during the **Zrive Applied Data Science** program. The objective was to build a machine learning model capable of anticipating sudden, high-magnitude market rallies (specifically, the S\&P 500 rising \>6% within 20 sessions).
+This project was developed in response to a challenge by **ETS Asset Management Factory** during the **Zrive Applied Data Science** program. The objective was to build a machine learning model capable of anticipating sudden, high-magnitude market rallies.
 
 The ultimate goal was to generate a predictive signal that allows conservative investment portfolios to capture "upside" potential during market rebounds without compromising their low-risk profile. The proposed implementation involves using these signals to trigger the purchase of Call options, creating an asymmetric risk profile (capped loss, uncapped gain).
 
@@ -21,7 +21,7 @@ Conservative investment portfolios often use hedging strategies to limit **drawd
   <img src="/images/portfolio/market_rallies_prediction/runupdrawdown.png" width="70%">
 </p>
 
-<p align="center"><em>Figure 1: Historical analysis of S&P 500 "Runups"…</em></p>
+<p align="center"><em>Figure 1: Historical analysis of S&P 500 "Runups"</em></p>
 
 
 ## 3\. Methodology
@@ -41,7 +41,11 @@ The model utilized daily financial data, including S\&P 500 Total Return prices,
   <img src="/images/portfolio/market_rallies_prediction/sliding_window_split.png" width="70%">
 </p>
 
-<p align="center"><em>Figure 2: Time series backtesting strategy using refitting and fixed training sizes to simulate real-world production forecasting.</em></p>
+<p align="center">
+  <em>Figure 2: Time series backtesting strategy using refitting and fixed training sizes to simulate real-world production forecasting.</em><br>
+  <em>Source: <a href="https://www.uber.com/en-ES/blog/forecasting-introduction/">Uber Engineering Blog</a></em>
+</p>
+
 
 ### Modeling Strategy
 
