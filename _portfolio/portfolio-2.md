@@ -74,9 +74,11 @@ Contrary to the initial hypothesis that complex non-linear models would capture 
 
 ## 5\. Conclusion
 
-This project highlighted that predicting large market jumps is a low signal-to-noise ratio problem. The key takeaway was that in highly noisy financial environments, **simpler models with strong regularization often generalize better** than complex architectures, which are prone to overfitting.
+This project highlighted that predicting large market jumps is a low signal-to-noise ratio problem. A key insight is that in such environments, simpler, heavily regularized models often generalize better than more complex architectures that tend to overfit.
 
-The final model provided a statistically significant edge over random chance. By coupling this prediction with an options strategy, the signals are precise enough to justify the cost of premiums, offering a viable method to solve the business problem of lagging performance during market recoveries.
+The final model delivered promising backtesting results, showing improvements over baseline strategies.
+
+However, the model is not yet production-ready. Its effectiveness still needs to be validated in a realistic trading evaluation, stress-testing across market regimes, and assessing execution and option-pricing constraints. Only after confirming robustness in real-time conditions could this signal be reliably integrated into an investment process.
 
 ## 6. Credits & Team
 This project was a collaborative effort developed by **Antonio García Garví**, **Pedro Tejero**, and **Hugo Nieto**, under the technical mentorship of **Guillermo Barquero**.
