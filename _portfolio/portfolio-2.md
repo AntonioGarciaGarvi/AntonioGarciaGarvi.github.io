@@ -28,7 +28,7 @@ Conservative investment portfolios often use hedging strategies to limit **drawd
 
 ### Data & Feature Engineering
 
-The model utilized daily financial data, including S\&P 500 Total Return prices, the VIX volatility index, and sector-specific data.
+The model utilized daily financial data, including S&P 500 Total Return prices, the VIX volatility index, and sector-specific data.
 
   * **Target Definition:** A binary classification target defined as a market rise of $\ge 6\%$ within a forward-looking 20-session window.
   * **Feature Construction:**
