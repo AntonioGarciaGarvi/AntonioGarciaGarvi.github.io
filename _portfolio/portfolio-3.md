@@ -51,7 +51,7 @@ The model utilized daily financial data, including S&P 500 Total Return prices, 
 
 The problem is characterized by high noise and a significant class imbalance (only \~7.4% of days preceded a major rally).
 
-1.  **Baselines:** Benchmarked against Random Walks (Monte Carlo simulations), drawdown correlaton, and standard technical strategies (EMA Crossover + RSI).
+1.  **Baselines:** Benchmarked against Random Walks (Monte Carlo simulations), drawdown correlation, and standard technical strategies (EMA Crossover + RSI).
 2.  **Model Selection:** Compared Linear Models (Logistic Regression with Ridge/Lasso regularization) against Non-Linear Models (LightGBM).
 3.  **Optimization Metric:** Prioritized **Precision-Recall AUC (PR-AUC)**. In this context, Precision is vital (False Positives cost money in option premiums) and Recall is necessary to ensure we don't miss the rare profitable opportunities.
 
